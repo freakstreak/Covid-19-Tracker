@@ -10,15 +10,7 @@ ul{
   margin-left: 0px;
 }
 
-.navbar {
-  width: 100%;
-  background-color: #F0F0F0;
-  overflow: auto;
-  padding: 0 0 0 20px;
-  display: flex;
-  justify-content: space-evenly;
-  margin: 0;
-}
+
 
 .navbar li {
   float: left;
@@ -28,25 +20,16 @@ ul{
   font-size: 17px;
 }
 
-/* .navbar li:hover {
-  background-color: #000;
-} */
-
-/* .active {
-  background-color: #04AA6D;
-}
-
-@media screen and (max-width: 500px) {
-  .navbar a {
-    float: none;
-    display: block;
-  }
-} */
-
-/* li{
-  border-bottom: 1px solid #555; 
+.navbar {
+  width: 100%;
+  background-color: #F0F0F0;
+  overflow: auto;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-evenly;
   
-} */
+  margin: 0;
+}
 
 .container {
     display: flex;
@@ -56,6 +39,7 @@ ul{
     align-items: center;
     flex-wrap: wrap;
     background-color: #F0F0F0;
+
 }
 
 .filter{
@@ -115,6 +99,7 @@ ul{
   border-radius: 4px;
   padding: 15px;
   font-size: 1rem;
+  background-color: white;
   /* margin-left: 60%; */
 }
 

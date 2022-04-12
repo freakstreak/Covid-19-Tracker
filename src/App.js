@@ -74,7 +74,7 @@ function App() {
         });
     } else {
       const d = new Date();
-      const to = formatDate(d);
+      const to = formatDate(d.setDate(d.getDate() -1));
       const from = formatDate(d.setDate(d.getDate() - days));
       // console.log(from, to);
 
@@ -85,7 +85,7 @@ function App() {
   const daysHandler = (event) => {
     setDays(event.target.value);
     const d = new Date();
-    const to = formatDate(d);
+    const to = formatDate(d.setDate(d.getDate() -1));
     const from = formatDate(d.setDate(d.getDate() - event.target.value));
 
     reportByDateChange(country, from, to);
@@ -97,6 +97,8 @@ function App() {
         `/country/${countrySlug}/status/confirmed?from=${from}T00:00:00Z&to=${to}T00:00:00Z`
       )
       .then((res) => {
+        console.log("dates from: ", from);
+        console.log("Dates to: " , to);
         console.log(res);
         console.log(covidSummary);
 
