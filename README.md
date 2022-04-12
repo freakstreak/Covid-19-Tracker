@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app
 
+## Below is the link of my deployed site
+link: https://covid-tracker-assignment.netlify.app/
+
 ## To run this app locally on your system follow these steps
 
 -> open command line and run git clone https://github.com/freakstreak/Covid-19-Tracker .\
