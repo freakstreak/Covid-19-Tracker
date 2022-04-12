@@ -2,37 +2,149 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul{
+  list-style: none;
+  
+  
+  flex-wrap: wrap;
+  margin-left: 0px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
+  width: 100%;
+  background-color: #F0F0F0;
+  overflow: auto;
+  padding: 0 0 0 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
+  margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar li {
+  float: left;
+  padding: 12px;
+  
+  text-decoration: none;
+  font-size: 17px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* .navbar li:hover {
+  background-color: #000;
+} */
+
+/* .active {
+  background-color: #04AA6D;
 }
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+} */
+
+/* li{
+  border-bottom: 1px solid #555; 
+  
+} */
+
+.container {
+    display: flex;
+    width: 100%;
+    padding: 20px 0;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #F0F0F0;
+}
+
+.filter{
+  margin: auto 0px;
+  width: 150px;
+}
+
+.cardHeading{
+  font-weight: 600;
+}
+
+.card{
+  background: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  box-sizing: 0 0 10px 0 #eee;
+  border-top: 1px solid #cecece;
+  border-left: 1px solid #cecece;
+  border-right: 1px solid #cecece;
+
+  margin: 10px;
+  /* background-color: #fff; */
+  /* border-radius: 10px; */
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 170px;
+  height: 100px;
+}
+
+.countryCard{
+  border-bottom: 5px solid rgb(235, 232, 95);
+}
+
+.recoveredCard{
+  border-bottom: 5px solid rgb(75, 192, 128);
+}
+
+.confirmedCard{
+  border-bottom: 5px solid rgba(255, 159, 64, 1);
+}
+
+
+.deathsCard{
+  border-bottom: 5px solid rgba(204, 7, 7, 0.699);
+}
+
+
+
+.autocomplete{
+  text-align: center;
+}
+
+.optionMenu{
+  width: 150px;
+  height: 56px;
+  border: 1px solid #cecece;
+  border-radius: 4px;
+  padding: 15px;
+  font-size: 1rem;
+  /* margin-left: 60%; */
+}
+
+.optionMenu:hover{
+  border: 1px solid ;
+}
+
+.optionMenu:focus{
+  border: 2px solid #2196f3;
+  outline: none;
+}
+
+.optionMenu:after{
+  border: 2px solid #2196f3;
+  
+}
+
+img{
+  width: 150px;
+  height: 56px;
+}
+
+.dashboard{
+
+    display: flex;
+    width: 50%;
+    padding: 5px 0;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #fff;
+}
+
