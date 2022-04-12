@@ -7,10 +7,10 @@ const CovidSummary = (props) => {
   return (
     <div>
       <div>
-        <div className="dashboard">
+        {/* <div className="dashboard">
           <img src="https://www.un.org/sites/un2.un.org/files/covid19_response_icon.svg" alt=""/>
           <h2>Covid19 Dashboard</h2>
-        </div>
+        </div> */}
         
         {/* <h1>{country}</h1> */}
 

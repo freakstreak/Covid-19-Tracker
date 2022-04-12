@@ -53,7 +53,7 @@ function LineGraph(props) {
     <div
         style={{
             width:'600px',
-            height:'600px',
+            
             margin:'50px auto'
             }}>
     <p>Toll</p>

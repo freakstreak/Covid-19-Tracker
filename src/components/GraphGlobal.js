@@ -1,6 +1,7 @@
 import React from 'react';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
+import { padding } from '@mui/system';
 
 
 
@@ -50,7 +51,8 @@ function GraphGlobal( props ) {
         style={{
             width:'300px',
             height:'300px',
-            margin:'25px auto'
+            margin:'25px auto',
+            padding: '0px 0px 50px 0px'
             }}>
     <p>Toll</p>
     <Pie  data={data} />

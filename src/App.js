@@ -6,6 +6,7 @@ import axios from "./axios";
 import { useEffect, useState } from "react";
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
+import Dashboard from "./components/Dashboard";
 // import { textAlign } from "@mui/system";
 
 function App() {
@@ -74,7 +75,7 @@ function App() {
         });
     } else {
       const d = new Date();
-      const to = formatDate(d.setDate(d.getDate() -1));
+      const to = formatDate(d.setDate(d.getDate() - 1));
       const from = formatDate(d.setDate(d.getDate() - days));
       // console.log(from, to);
 
@@ -85,7 +86,7 @@ function App() {
   const daysHandler = (event) => {
     setDays(event.target.value);
     const d = new Date();
-    const to = formatDate(d.setDate(d.getDate() -1));
+    const to = formatDate(d.setDate(d.getDate() - 1));
     const from = formatDate(d.setDate(d.getDate() - event.target.value));
 
     reportByDateChange(country, from, to);
@@ -98,12 +99,12 @@ function App() {
       )
       .then((res) => {
         console.log("dates from: ", from);
-        console.log("Dates to: " , to);
+        console.log("Dates to: ", to);
         console.log(res);
         console.log(covidSummary);
 
         const yAxisCovidCount = res.data.map((d) => d.Cases);
-        const xAxisLabel = res.data.map((d) => d.Date.substring(0,10));
+        const xAxisLabel = res.data.map((d) => d.Date.substring(0, 10));
         const covidDetails = covidSummary.Countries.find(
           (country) => country.Slug === countrySlug.toLowerCase()
         );
@@ -126,56 +127,68 @@ function App() {
 
   return (
     <div className="App">
-      
-      <CovidSummary
-        totalConfimed={totalConfimed}
-        totalRecoverd={totalRecovered}
-        totalDeaths={totalDeaths}
-        country={country ? country : "Global"}
-      />
-      <div className="">
-        {/* <input type="text" list="countries" onChange={countryHandler} />
+      <Dashboard/>
+      <div className="middle">
+        <CovidSummary
+          totalConfimed={totalConfimed}
+          totalRecoverd={totalRecovered}
+          totalDeaths={totalDeaths}
+          country={country ? country : "Global"}
+        />
+        <div className="">
+          {/* <input type="text" list="countries" onChange={countryHandler} />
           <datalist id="countries" onClick={optionCountryHandler}>
           {covidSummary.Countries &&
             covidSummary.Countries.map( (country) => 
                   <option key={country.Slug} value={country.Country}></option> 
             )}
           </datalist> */}
-        <ul className="navbar">
-          {/* <li className="logo">
+          <ul className="navbar">
+            {/* <li className="logo">
             <img alt="" src="https://www.un.org/sites/un2.un.org/files/covid-19.svg"/>
           </li> */}
-          <li className="filter">
-            <label >Filters: </label>
-          </li>
-          <li>
-            <Autocomplete
-              value={country}
-              onChange={countryHandler}
-              disablePortal
-              id="combo-box-demo"
-              options={countryData}
-              sx={{
-                width: 150,
-                background: "#fff"
-              }}
-              renderInput={(params) => <TextField {...params} placeholder="Country" label="" />}
-            />
-          </li>
-          <li>
-            <select className="optionMenu" placeholder="Days" value={days} onChange={daysHandler}>
-              <option value={7}>Last 7 days</option>
-              <option value={30}>Last 30 days</option>
-              <option value={90}>Last 90 days</option>
-            </select>
-          </li>
-        </ul>
+            <li className="filter">
+              <label>Filters: </label>
+            </li>
+            <li>
+              <Autocomplete
+                value={country}
+                onChange={countryHandler}
+                disablePortal
+                id="combo-box-demo"
+                options={countryData}
+                sx={{
+                  width: 150,
+                  background: "#fff",
+                }}
+                renderInput={(params) => (
+                  <TextField {...params} placeholder="Country" label="" />
+                )}
+              />
+            </li>
+            <li>
+              <select
+                className="optionMenu"
+                placeholder="Days"
+                value={days}
+                onChange={daysHandler}
+              >
+                <option value={7}>Last 7 days</option>
+                <option value={30}>Last 30 days</option>
+                <option value={90}>Last 90 days</option>
+              </select>
+            </li>
+          </ul>
+        </div>
       </div>
+
+      <div className="graph">
       {country ? (
         <LineGraph yAxis={coronaCountArr} label={label} />
       ) : (
         <GraphGlobal values={globalDataArr} />
       )}
+      </div>
       {/* <LineGraph yAxis={country && coronaCountArr} label={country && label} /> */}
     </div>
   );

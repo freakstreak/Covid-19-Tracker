@@ -4,21 +4,19 @@
 
 ul{
   list-style: none;
-  
-  
   flex-wrap: wrap;
   margin-left: 0px;
 }
 
 
-
 .navbar li {
   float: left;
   padding: 12px;
-  
   text-decoration: none;
   font-size: 17px;
 }
+
+
 
 .navbar {
   width: 100%;
@@ -133,3 +131,16 @@ img{
     background-color: #fff;
 }
 
+@media only screen and (max-width: 600px) {
+  .graph{
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  .dashboard{
+    margin-top: 10px;
+  }
+
+  .navbar{
+    flex-wrap:nowrap;
+  }
+}
