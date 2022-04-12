@@ -1,6 +1,14 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app
+
+## To run this app locally on your system follow these steps
+
+-> open command line and run git clone https://github.com/freakstreak/Covid-19-Tracker .\
+-> now in command line cd to the folder in which you have cloned the app.\
+-> now inside it run "npm install".\
+-> after that to run this project locally run "npm start".\
+-> go to your we browser and type "http://localhost:3000/" in url.
 
 ## Available Scripts
 
