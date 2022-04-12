@@ -8,7 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 -> now in command line cd to the folder in which you have cloned the app.\
 -> now inside it run "npm install".\
 -> after that to run this project locally run "npm start".\
--> go to your we browser and type "http://localhost:3000/" in url.\
+-> go to your we browser and type "http://localhost:3000/" in url.
 
 ## Available Scripts
 
